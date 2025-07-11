@@ -1,0 +1,11 @@
+# Ignore configuration with API keys
+config.ini
+
+# Ignore Python cache and virtualenv
+__pycache__/
+*.py[cod]
+venv/
+
+# Ignore IDE files
+.idea/
+.vscode/

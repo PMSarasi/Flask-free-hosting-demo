@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather in {{ city }}</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        .weather-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            max-width: 300px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .weather-icon { font-size: 40px; }
+    </style>
+</head>
+<body>
+    <div class="weather-card">
+        <div class="weather-icon">
+            {% if temp > 25 %}☀️{% elif temp > 15 %}⛅{% else %}🌧️{% endif %}
+        </div>
+        <h2>{{ city }}</h2>
+        <p><strong>Temperature:</strong> {{ temp }}°C</p>
+        <p><strong>Humidity:</strong> {{ humidity }}%</p>
+        <p><strong>Conditions:</strong> {{ description }}</p>
+        <a href="/">🔍 Check another city</a>
+    </div>
+</body>
+</html>
